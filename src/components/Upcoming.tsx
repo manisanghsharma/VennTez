@@ -1,6 +1,6 @@
 const Upcoming = () => {
   return (
-		<div className='w-full flex justify-center '>
+		<div className='w-full flex justify-center mb-5'>
 			<div className='flex justify-between p-3 w-[90%] h-[180px] bg-white shadow-md  transition-all mt-10 rounded-lg cursor-pointer border-2 border-lime-600 '>
 				<div className='flex justify-start gap-10'>
 					<div>
@@ -20,8 +20,8 @@ const Upcoming = () => {
 					</div>
 				</div>
 
-				<div className='w-[30%] flex flex-col items-end'>
-					<p className='text-2xl font-bold text-right mb-2'>
+				<div className='w-[40%] flex flex-col items-end'>
+					<p className='text-[25px] font-bold text-right mb-2 mr'>
 						Funding Starts Soon
 					</p>
 				</div>

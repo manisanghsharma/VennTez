@@ -1,11 +1,11 @@
 import Connect from "../components/Connect"
-import Projects from "../components/Projects"
 import { fundraise } from "../utils/operation";
 import { fetchStorage } from "../utils/tzkt";
 import ProjectDisplay from "../components/ProjectDisplay";
 import { Link } from "react-router-dom";
 import Upcoming from "../components/Upcoming";
 import React, { useState, useEffect } from "react";
+import ProjectDisplay2 from "../components/ProjectDisplay2";
 
 
 const Explore: React.FC = () => {
@@ -18,7 +18,7 @@ const Explore: React.FC = () => {
 	const [loading, setLoading] = useState(false);
 
 	useEffect(() => {
-		// TODO 9 - Fetch players and tickets remaining from storage
+
 		const fetchData = async () => {
 			const storage = await fetchStorage();
 			console.log(storage.amount_raised);
@@ -31,7 +31,6 @@ const Explore: React.FC = () => {
 		fetchData();
 	}, []);
 
-	// TODO 7.a - Complete onBuyTicket function
 	const onContribute = async () => {
 		try {
 			setLoading(true);
@@ -54,7 +53,9 @@ const Explore: React.FC = () => {
 				<Link to={"/tezplay"}>
 					<ProjectDisplay goal={goal} curGoal={curGoal} donators={donators} />
 				</Link>
-				<ProjectDisplay goal={goal} curGoal={curGoal} donators={donators} />
+				<Link to={"/teztunes"}>
+					<ProjectDisplay2 />
+				</Link>
 
 				<h1 className='text-center font-bold text-[50px] mt-10 text-[#23394D]'>
 					Upcoming Projects

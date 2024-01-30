@@ -6,14 +6,14 @@ const Navbar: React.FC = () => {
   
 
   return (
-		<div className='flex justify-between items-center'>
-			<div>
+		<div className='flex justify-between items-center ml-12 mr-16'>
+			<Link to={'/'}>
 				<img
 					src='./assets/logo copy.png'
 					alt=''
-					className='w-[300px] mt-3'
+					className='w-[280px] mt-3'
 				/>
-			</div>
+			</Link>
 			<div className='flex gap-14 font-medium text-xl mt-2 nav'>
 				<Link to={'/'} className='transition-all cursor-pointer hover:text-[#92BE19]'>
 					Home
@@ -24,7 +24,7 @@ const Navbar: React.FC = () => {
 				<Link to={'/explore'} className='transition-all cursor-pointer hover:text-[#92BE19]'>
 					Explore
 				</Link>
-				<Link to={'contactus'} className='transition-all cursor-pointer hover:text-[#92BE19]'>
+				<Link to={'/contactus'} className='transition-all cursor-pointer hover:text-[#92BE19]'>
 					Contact Us
 				</Link>
 			</div>

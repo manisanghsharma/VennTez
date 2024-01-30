@@ -1,13 +1,13 @@
 import LinearProgress from "@mui/material/LinearProgress";
 import Box from "@mui/material/Box";
 import { useState } from "react";
-import { fundraise } from "../utils/operation";
-const GoalBar = ({goal, curGoal, donators}) => {
+import { fundraise2 } from "../utils/operation";
+const TezTunesBar = ({goal, curGoal, donators}) => {
     const [amount, setAmount] = useState(0);
 
      const onContribute = async () => {
 				try {
-					await fundraise(amount);
+					await fundraise2(amount);
 					alert("Transaction Succesful!");
                     window.location.reload();
 				} catch (err) {
@@ -48,9 +48,9 @@ const GoalBar = ({goal, curGoal, donators}) => {
 					/>
 					<p className="font-medium text-xl ml-3">XTZ</p>
 				</div>
-				<p className='text-[21px] font-medium text-base ml-3'>25 Days Left</p>
+				<p className='text-[21px] font-medium text-base ml-3'>28 Days Left</p>
 			</div>
 		</div>
 	);
 };
-export default GoalBar;
+export default TezTunesBar;

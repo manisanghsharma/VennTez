@@ -77,7 +77,7 @@ const Project1 = () => {
 				<div className='grid grid-cols-2 p-8 pt-0 gap-2'>
 					<div>
 						{Object.keys(contributers).map((key) => (
-							<div className='w-full rounded-lg shadow-xl bg-white mb-2'>
+							<div className='w-full rounded-lg shadow-md bg-white mb-2'>
 								<p id={key} className='p-3 text-center text-xl font-semibold'>
 									{key}
 								</p>
@@ -86,7 +86,7 @@ const Project1 = () => {
 					</div>
 					<div>
 						{Object.values(contributers).map((key) => (
-							<div className='w-full rounded-lg shadow-xl bg-white mb-2'>
+							<div className='w-full rounded-lg shadow-md bg-white mb-2'>
 								<p id={key} className='p-3 text-center text-xl font-semibold'>
 									{key/1000000}
 								</p>

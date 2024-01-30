@@ -34,7 +34,7 @@ const ProjectDisplay = ({ goal, curGoal, donators }) => {
 					</Box>
 
 					<p className="text-md">{donators} Donators</p>
-          <p className="font-semibold text-xl mt-5">28 Days Left</p>
+          <p className="font-semibold text-xl mt-5">25 Days Left</p>
 				</div>
 			</div>
 		</div>

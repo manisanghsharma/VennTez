@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { connectWallet, getAccount } from "../utils/wallet";
+import { Link } from "react-router-dom";
 
 const Navbar: React.FC = () => {
   
@@ -14,18 +15,18 @@ const Navbar: React.FC = () => {
 				/>
 			</div>
 			<div className='flex gap-14 font-medium text-xl mt-2 nav'>
-				<p className='transition-all cursor-pointer hover:text-[#92BE19]'>
+				<Link to={'/'} className='transition-all cursor-pointer hover:text-[#92BE19]'>
 					Home
-				</p>
-				<p className='transition-all cursor-pointer hover:text-[#92BE19]'>
+				</Link>
+				<Link to={'/about'} className='transition-all cursor-pointer hover:text-[#92BE19]'>
 					About Us
-				</p>
-				<p className='transition-all cursor-pointer hover:text-[#92BE19]'>
+				</Link>
+				<Link to={'/explore'} className='transition-all cursor-pointer hover:text-[#92BE19]'>
 					Explore
-				</p>
-				<p className='transition-all cursor-pointer hover:text-[#92BE19]'>
+				</Link>
+				<Link to={'contactus'} className='transition-all cursor-pointer hover:text-[#92BE19]'>
 					Contact Us
-				</p>
+				</Link>
 			</div>
 		</div>
 	);

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { getBalance } from "../utils/tezos";
 import { connectWallet, getAccount } from "../utils/wallet";
+import { Link } from "react-router-dom";
 const Connect = () => {
 
   const [account, setAccount] = useState("");
@@ -26,7 +27,9 @@ const Connect = () => {
 
   return (
 		<div className='flex justify-between items-center mr-16 ml-12 '>
-			<img src='./assets/logo copy.png' alt='' className='w-[280px] mt-3' />
+			<Link to={'/'}>
+				<img src='./assets/logo copy.png' alt='' className='w-[280px] mt-3' />
+			</Link>
 			<div>
 				<button
 					onClick={onConnectWallet}

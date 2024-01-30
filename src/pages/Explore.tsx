@@ -2,6 +2,9 @@ import Connect from "../components/Connect"
 import Projects from "../components/Projects"
 import { fundraise } from "../utils/operation";
 import { fetchStorage } from "../utils/tzkt";
+import ProjectDisplay from "../components/ProjectDisplay";
+import { Link } from "react-router-dom";
+import Upcoming from "../components/Upcoming";
 import React, { useState, useEffect } from "react";
 
 
@@ -44,7 +47,20 @@ const Explore: React.FC = () => {
 	return (
 		<>
 			<Connect />
-			<Projects goal={goal} curGoal={curGoal} donators={donators} />
+			<div>
+				<h1 className='text-center font-bold text-[50px] mt-10 text-[#23394D]'>
+					Available Projects
+				</h1>
+				<Link to={"/tezplay"}>
+					<ProjectDisplay goal={goal} curGoal={curGoal} donators={donators} />
+				</Link>
+				<ProjectDisplay goal={goal} curGoal={curGoal} donators={donators} />
+
+				<h1 className='text-center font-bold text-[50px] mt-10 text-[#23394D]'>
+					Upcoming Projects
+				</h1>
+				<Upcoming />
+			</div>
 		</>
 	);
 }

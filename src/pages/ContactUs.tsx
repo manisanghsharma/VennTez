@@ -3,6 +3,7 @@ const ContactUs = () => {
   return (
     <div>
         <Navbar />
+        
     </div>
   )
 }

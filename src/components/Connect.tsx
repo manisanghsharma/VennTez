@@ -21,10 +21,11 @@ const Connect = () => {
 		await connectWallet();
 		const account = await getAccount();
 		setAccount(account);
+		window.location.reload();
 	};
 
   return (
-		<div className='flex justify-between items-center'>
+		<div className='flex justify-between items-center mr-16 ml-12 '>
 			<img src='./assets/logo copy.png' alt='' className='w-[280px] mt-3' />
 			<div>
 				<button

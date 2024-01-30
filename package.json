@@ -9,6 +9,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emotion/react": "^11.11.3",
+    "@emotion/styled": "^11.11.0",
+    "@mui/material": "^5.15.6",
     "@taquito/beacon-wallet": "^17.0.0",
     "@taquito/taquito": "^17.0.0",
     "buffer": "^6.0.3",
@@ -16,6 +19,7 @@
     "qrcode-generator": "^1.4.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-router-dom": "^6.21.3",
     "stream-browserify": "^3.0.0",
     "util": "^0.12.5"
   },

@@ -49,12 +49,12 @@ const Explore: React.FC = () => {
 				<h1 className='text-center font-bold text-[50px] mt-10 text-[#23394D]'>
 					Available Projects
 				</h1>
-				<Link to={"/tezplay"}>
+				
 					<ProjectDisplay goal={goal} curGoal={curGoal} donators={donators} />
-				</Link>
-				<Link to={"/teztunes"}>
+				
+				
 					<ProjectDisplay2 />
-				</Link>
+				
 
 				<h1 className='text-center font-bold text-[50px] mt-10 text-[#23394D]'>
 					Upcoming Projects

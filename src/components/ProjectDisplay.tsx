@@ -1,8 +1,10 @@
 import LinearProgress from "@mui/material/LinearProgress";
 import Box from "@mui/material/Box";
+import { Link } from "react-router-dom";
 
 const ProjectDisplay = ({ goal, curGoal, donators }) => {
 	return (
+		<Link to={"/tezplay"} 	className="hover: text-black">
 		<div className='w-full flex justify-center '>
 			<div className='flex justify-between p-3 w-[90%] h-[180px] bg-white shadow-md  transition-all mt-10 rounded-lg cursor-pointer border-2 border-lime-600 '>
 				<div className='flex justify-start gap-10'>
@@ -38,6 +40,7 @@ const ProjectDisplay = ({ goal, curGoal, donators }) => {
 				</div>
 			</div>
 		</div>
+		</Link>
 	);
 };
 export default ProjectDisplay;

@@ -6,7 +6,7 @@ const Navbar: React.FC = () => {
   
 
   return (
-		<div className='flex justify-between items-center ml-12 mr-16'>
+		<div className='flex justify-between items-center ml-12 mr-16 h-[90px]'>
 			<Link to={'/'}>
 				<img
 					src='./assets/logo copy.png'

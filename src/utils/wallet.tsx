@@ -1,7 +1,6 @@
 
 import { BeaconWallet } from "@taquito/beacon-wallet";
 import {NetworkType} from "@airgap/beacon-dapp"
-import { tezos } from "./tezos";
 
 //connecting ghostnet 
 export const wallet =  new BeaconWallet({

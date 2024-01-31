@@ -9,7 +9,7 @@ const Connect = () => {
 
 	useEffect(() => {
 		(async () => {
-			// TODO 5.b - Get the active account
+
 			const account = await getAccount();
 			setAccount(account);
       const balance = await getBalance();
@@ -17,7 +17,7 @@ const Connect = () => {
 		})();
 	}, []);
 
-	// TODO 4.a - Complete onConnectWallet function
+
 	const onConnectWallet = async () => {
 		await connectWallet();
 		const account = await getAccount();

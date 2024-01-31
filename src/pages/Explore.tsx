@@ -12,7 +12,6 @@ const Explore: React.FC = () => {
 	const [goal, setGoal] = useState(0);
 	const [curGoal, setCurGoal] = useState(0);
 	const [donators, setDonators] = useState(0);
-	// const [account, setAccount] = useState("");
 	const [amount, setAmount] = useState("");
 	const [contributers, setContributors] = useState([]);
 	const [loading, setLoading] = useState(false);

@@ -2,7 +2,12 @@ import LinearProgress from "@mui/material/LinearProgress";
 import Box from "@mui/material/Box";
 import { useState } from "react";
 import { fundraise2 } from "../utils/operation";
-const TezTunesBar = ({goal, curGoal, donators}) => {
+interface GoalBarProps {
+	goal: number;
+	curGoal: number;
+	donators: number;
+}
+const TezTunesBar = ({goal, curGoal, donators}: GoalBarProps) => {
     const [amount, setAmount] = useState(0);
 
      const onContribute = async () => {
@@ -11,7 +16,9 @@ const TezTunesBar = ({goal, curGoal, donators}) => {
 					alert("Transaction Succesful!");
                     window.location.reload();
 				} catch (err) {
-					alert("Transaction Failed:", err.message);
+					 if (err instanceof Error) {
+							alert("Transaction Failed: " + err.message);
+						}
 				}
 			};
 
@@ -32,21 +39,29 @@ const TezTunesBar = ({goal, curGoal, donators}) => {
 			</div>
 			<div className='mt-2'>
 				<Box sx={{ width: "100%" }}>
-					<LinearProgress variant='determinate' value={curGoal/goal * 100} />
+					<LinearProgress
+						variant='determinate'
+						value={(curGoal / goal) * 100}
+					/>
 				</Box>
 			</div>
 			<div className='flex justify-between items-center mt-4'>
 				<div className='flex items-center'>
-					<button onClick={amount && onContribute} className='px-4 py-2 text-xl font-medium rounded-lg border-[3px] border-gray-300 hover:border-green-600 hover:bg-green-600 hover:text-white transition-all'>
+					<button
+						onClick={() => {
+							if (amount) onContribute();
+						}}
+						className='px-4 py-2 text-xl font-medium rounded-lg border-[3px] border-gray-300 hover:border-green-600 hover:bg-green-600 hover:text-white transition-all'
+					>
 						Fundraise
 					</button>
 					<input
 						type='number'
 						className='px-2 py-2 w-28 text-xl ml-5 font-medium rounded-lg border-[3px] border-gray-300'
-                        value={amount}
-                        onChange={(e) => setAmount(parseInt(e.target.value))}
+						value={amount}
+						onChange={(e) => setAmount(parseInt(e.target.value))}
 					/>
-					<p className="font-medium text-xl ml-3">XTZ</p>
+					<p className='font-medium text-xl ml-3'>XTZ</p>
 				</div>
 				<p className='text-[21px] font-medium text-base ml-3'>28 Days Left</p>
 			</div>

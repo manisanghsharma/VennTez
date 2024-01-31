@@ -1,8 +1,13 @@
 import LinearProgress from "@mui/material/LinearProgress";
 import Box from "@mui/material/Box";
 import { Link } from "react-router-dom";
+interface GoalBarProps {
+	goal: number;
+	curGoal: number;
+	donators: number;
+}
 
-const ProjectDisplay = ({ goal, curGoal, donators }) => {
+const ProjectDisplay = ({ goal, curGoal, donators }: GoalBarProps) => {
 	return (
 		<Link to={"/tezplay"} 	className="hover: text-black">
 		<div className='w-full flex justify-center '>

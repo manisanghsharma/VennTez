@@ -1,6 +1,6 @@
 
 import { tezos } from "./tezos";
-export const fundraise = async (val) => {
+export const fundraise = async (val: number) => {
   try {
     const contract = await tezos.wallet.at(
 			"KT1VqLrXUCDFZnjTQJX9qiDFxNznzsFhfQcA"
@@ -18,7 +18,7 @@ export const fundraise = async (val) => {
 
 };
 
-export const fundraise2 = async (val) => {
+export const fundraise2 = async (val: number) => {
 	try {
 		const contract = await tezos.wallet.at(
 			"KT1C6MK92zJiN6hk1CbZPbabDaZE6iC9b1jh"

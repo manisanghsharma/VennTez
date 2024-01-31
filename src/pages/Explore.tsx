@@ -33,7 +33,7 @@ const Explore: React.FC = () => {
 	const onContribute = async () => {
 		try {
 			setLoading(true);
-			await fundraise(amount);
+			await fundraise(Number(amount));
 			alert("Sucessfully contributed!");
 			window.location.reload();
 		} catch (error) {

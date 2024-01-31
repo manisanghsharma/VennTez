@@ -13,7 +13,7 @@ const Connect = () => {
 			const account = await getAccount();
 			setAccount(account);
       const balance = await getBalance();
-      setBalance(balance);
+      setBalance(Number(balance));
 		})();
 	}, []);
 

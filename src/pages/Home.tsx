@@ -1,6 +1,12 @@
 import Navbar from "../components/Navbar"
 import { Link } from "react-router-dom";
+import isMobile from "is-mobile";
+import Mobile from "../components/Mobile";
 const Home = () => {
+	const isMob = isMobile();
+	if (isMob){
+		return <Mobile />
+	}
   return (
 		<>
 				<Navbar />

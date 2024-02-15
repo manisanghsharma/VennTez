@@ -2,7 +2,6 @@ import Connect from "../components/Connect"
 import { fundraise } from "../utils/operation";
 import { fetchStorage } from "../utils/tzkt";
 import ProjectDisplay from "../components/ProjectDisplay";
-import { Link } from "react-router-dom";
 import Upcoming from "../components/Upcoming";
 import React, { useState, useEffect } from "react";
 import ProjectDisplay2 from "../components/ProjectDisplay2";
